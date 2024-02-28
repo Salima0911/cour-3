@@ -44,6 +44,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="register" >inscription</a>
                 </li>
+                
                 <li class="nav-item">
                     <a class="nav-link" href="admin" >admin</a>
                 </li>

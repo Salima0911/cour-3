@@ -5,12 +5,21 @@ $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 $routes = [
     '/' => '/HomeController.php',
     '/mentions-legales' => '/MentionController.php',
+    //connexion inscription 
     '/login' => '/LoginController.php',
-    '/product' => '/ProductController.php',
     '/register'=>'/RegisterController.php',
-    '/product-create' => '/ProductCreateController.php',
-    '/product-read' => '/ProductReadController.php',
+
+    // admin
     '/admin' => '/AdminController.php',
+     '/admin-delete' => '/AdminDeleteController.php',
+    // crud produit
+     '/product' => '/ProductController.php',  
+     '/product-create' => '/ProductCreateController.php',
+     '/product-update'=>'ProductUpdateController.php',
+     '/product-read' => '/ProductReadController.php',
+     '/product-delete' => 'ProductDeleteController.php',    
+    
+   
 
 ];
 

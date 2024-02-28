@@ -8,14 +8,14 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password'])
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+// -----------------------------------------------------
+
+
+// verification de la validité  de l'eamil puis de la presence de l'email en bdd
     if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
         require_once(__DIR__.'/../Views/register.view.php');
         exit;
     }
-
-
-
-
 
 
     // je creer mon utilisateur en base de donnee et je les met dans la variable user
@@ -28,6 +28,8 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password'])
 
     // quand l'element est unique on utilise fetch et non fechtALL
     $user = $userStatement->fetch();
+// -----------------------------------------------------------------------------
+//verification de  la validite de l'mail puis de la prescene de l'email  en bdd
     if ($user) {
 
         $error = "Email deja existant";
